@@ -1,0 +1,23 @@
+{
+  "name": "sakila",
+  "version": "1.0.0",
+  "description": "sakila dvd",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kndrx/sakila.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kndrx/sakila/issues"
+  },
+  "homepage": "https://github.com/Kndrx/sakila#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "node-sass": "^6.0.1"
+  }
+}
