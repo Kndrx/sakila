@@ -18,7 +18,7 @@ $movie = $query->getMovieById($id);
             <h6 class="card-subtitle mb-2 text-muted">Release year : <?php echo $movie['release_year'] ?></h6>
             <p class="card-text">Synopsys : <?php echo $movie['description'] ?></p>
             <p class="card-text">Rating : <?php echo $movie['rating'] ?></p>
-            <a href="rentForm.php" class="card-link">Réservez ce film</a>
+            <a href="rentForm.php" class="card-link">Rent this dvd</a>
         </div>
     </div>
     </div>

@@ -3,7 +3,7 @@
 include_once 'autoloader.php';
 autoloader::register();
 
-class movie extends database {
+class Movie extends Database {
 
     public function getAllMovies() {
         
@@ -28,10 +28,11 @@ class movie extends database {
         if (isset($_POST['query'])) {
             $str = $_POST['query'];
 
-        $sql = "SELECT * from film WHERE title LIKE :movie LIMIT 5 ";
-        $query = $this->connect()->prepare($sql);
-        $query->execute(['movie' => '%' . $str . '%']);
-        return $query->fetchAll();
+            $sql = "SELECT * from film WHERE title LIKE :movie LIMIT 10";
+            $query = $this->connect()->prepare($sql);
+            $query->execute(['movie' => '%' . $str . '%']);
+            return $query->fetchAll();
+        }
     }
-    }
+
 }

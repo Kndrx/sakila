@@ -4,7 +4,7 @@ require "layouts/header.php";
 require 'databaseClass/autoloader.php';
 autoloader::register();
 
-$query = new movie();
+$query = new Movie();
 $movies = $query->getAllMovies();
 
 $search = $query->getMovieBySearch();
@@ -15,12 +15,10 @@ $search = $query->getMovieBySearch();
 
 <!-- img for parallax effect-->
 <section>
-
     <img src="img/bg.jpg" alt="background" id="bg">
     <img src="img/moon.png" alt="moon" id="moon">
     <img src="img/mountain.png" alt="mountain" id="mountain">
     <img src="img/road.png" alt="road" id="road">
-
     <header>
         <div>
             <h2 id="text">Sakila</h2>
@@ -66,7 +64,10 @@ $search = $query->getMovieBySearch();
                     <h6 class="card-subtitle mb-2 text-muted">Release year : <?php echo $film['release_year'] ?></h6>
                     <p class="card-text">Synopsys : <?php echo $film['description'] ?></p>
                     <p class="card-text">Rating : <?php echo $film['rating'] ?></p>
-                    <a href="views/movie.php?id=<?php echo $film['film_id']; ?>" class="card-link">Réservez ce film</a>
+                    <div class="d-flex">
+                        <a href="views/movie.php?id=<?php echo $film['film_id']; ?>" class="card-link">See more...</a>
+                        <a href="views/rentForm.php" class="card-link justify-content-end">Rent this DVD</a>
+                    </div>
                 </div>
             </div>
             

@@ -1,11 +1,4 @@
 // parallax effect
-let bg = $("#bg");
-let moon = $("#moon");
-let mountain = $("#mountain");
-let road = $("#road");
-let text = $("#text");
-let btn_index = $("#btn_index");
-
 window.addEventListener('scroll', function () {
     var value = this.window.scrollY;
 
@@ -31,14 +24,15 @@ $("#search").keyup(function() {
                 $('#showlist').html(response);
             }
         });
-    
     }
     else {
         $('#showlist').html('');
     };
- 
 });
 
 $(document).on('click', 'a', function(){
     $('#search').val($(this).text());
 });
+
+// search by filter
+

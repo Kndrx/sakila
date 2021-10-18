@@ -1,6 +1,6 @@
 <?php
 
-class database {
+class Database {
 
   private $host = "127.0.0.1";
   private $username = "root";
