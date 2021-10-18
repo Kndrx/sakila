@@ -1,6 +1,6 @@
 # sakila
 
-Pour lancer l'application, il faut posséder soit ##XAMPP## pour les utilisateurs de Windows,  soit ##MAMP## pour les utilistaurs de MacOS.
+Pour lancer l'application, il faut posséder soit **XAMPP** pour les utilisateurs de Windows,  soit **MAMP** pour les utilistaurs de MacOS.
 
 Lien pour les installer XAMPP : https://www.apachefriends.org/fr/index.html.
 
