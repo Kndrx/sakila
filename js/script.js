@@ -16,28 +16,29 @@ window.addEventListener('scroll', function () {
     text.style.top = value * 1 + 'px';
     btn_index.style.top = value * 0.5 + 'px';
 });
-//end parallax effect
 
-//search bar
-$("#search").keyup(function () {
-    let searchText = $(this).val();
-    if (searchText != "") {
-    $.ajax({
-        url: "action.php",
-        method: "post",
-        data: {
-        query: searchText,
-        },
-        success: function (response) {
-        $("#show-list").html(response);
-        },
-    });
-    } else {
-    $("#show-list").html("");
+
+// searchbar
+$("#search").keyup(function() {
+    var searchText = $(this).val();
+
+    if (searchText != ''){
+        $.ajax({
+            url: 'searchDvd.php',
+            method: 'post',
+            data: {query:searchText},
+            success:function(response){
+                $('#showlist').html(response);
+            }
+        });
+    
     }
+    else {
+        $('#showlist').html('');
+    };
+ 
 });
-// Set searched text in input field on click of search button
-$(document).on("click", "a", function () {
-    $("#search").val($(this).text());
-    $("#show-list").html("");
+
+$(document).on('click', 'a', function(){
+    $('#search').val($(this).text());
 });

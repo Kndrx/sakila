@@ -1,6 +1,8 @@
 # sakila
 
+lancer avec xampp ou mamp
 
+npm install to install dependencies
 
 install sass parce que je voulais faire du scss
 
